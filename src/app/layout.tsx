@@ -74,9 +74,11 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" >
-      <GoogleAnalytics gaId="G-BCSQYEJTZZ" />
-      <SpeedInsights />
-      <Analytics />
+      <head>
+        <GoogleAnalytics gaId="G-BCSQYEJTZZ" />
+        <SpeedInsights />
+        <Analytics />
+      </head>
       <body className={inter.className} suppressHydrationWarning={true}>
         <MoreEighteen />
 {/*         <ModalPub /> */}
