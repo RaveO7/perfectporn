@@ -61,6 +61,9 @@ export const metadata: Metadata = {
     // creator: '@PerfectPorn', // Optionnel : votre compte Twitter si disponible
     // site: '@PerfectPorn' // Optionnel : compte Twitter du site
   }
+  other: {
+    "6a97888e-site-verification": "07bc72bd8d75f7e97c8be4156fee565a",
+  },
 }
 
 export const viewport: Viewport = {
