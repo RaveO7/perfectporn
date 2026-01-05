@@ -9,7 +9,7 @@ import './globals.css'
 
 import Header from '../components/Header'
 import MoreEighteen from '@/components/MoreEighteen'
-// import ModalPub from '@/components/ModalPub';
+import ModalPub from '@/components/ModalPub';
 import Footer from '@/components/Footer';
 
 const inter = Inter({
@@ -81,7 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
 
         <MoreEighteen />
-        {/* <ModalPub /> */}
+        <ModalPub />
 
         <main className="flex min-h-screen flex-col items-center">
           <Header />
