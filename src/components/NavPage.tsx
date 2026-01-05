@@ -14,14 +14,7 @@ export default function NavPage({ page, numberPage }: { page: number, numberPage
     const currentButtonTest = "     flex items-center justify-center px-4 h-10 border-gray-700 bg-gray-700 text-white dark:border-gray-700 dark:bg-gray-700 dark:text-white"
 
     return (
-        <nav aria-label="Page navigation" className='m-auto'>
-
-
-            <script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
- <ins class="eas6a97888e2" data-zoneid="5820858"  data-ex_av="name"></ins> 
- <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
-
-            
+        <nav aria-label="Page navigation" className='m-auto'>            
             <div className='inline-flex -space-x-px text-base h-10'>
                 {1 <= page - 3 && <Link href={`${pathname}`} className={classLBigButtonTest}>First</Link>}
                 {1 <= page - 1 && <Link href={`${pathname}?page=${page - 1}`} className={1 >= page - 2 ? classLBigButtonTest : classLittleButtonTest}>Previous</Link>}
