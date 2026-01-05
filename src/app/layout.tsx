@@ -81,7 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
 
         <MoreEighteen />
-        <ModalPub />
+        {/* <ModalPub /> */}
 
         <main className="flex min-h-screen flex-col items-center">
           <Header />
