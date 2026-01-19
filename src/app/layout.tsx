@@ -92,20 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </main>
 
-        {/* PopMagic / script tiers : on passe par next/script pour l'inline safely */}
-<script type="application/javascript">
-    var ad_idzone = "5820096",
-    ad_popup_fallback = false,
-    ad_popup_force = false,
-    ad_chrome_enabled = true,
-    ad_new_tab = false,
-    ad_frequency_period = 1440,
-    ad_frequency_count = 1,
-    ad_trigger_method = 3,
-    ad_trigger_delay = 0,
-    ad_capping_enabled = true; 
-</script>
-<script type="application/javascript" src="https://a.pemsrv.com/popunder1000.js"></script>
+        <script data-cfasync="false" src="//dcbbwymp1bhlf.cloudfront.net/?wbbcd=1238383"></script>
       </body>
     </html>
   )
