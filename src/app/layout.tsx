@@ -58,6 +58,7 @@ export const metadata: Metadata = {
     images: ['/opengraph-image.png'],
   },
   other: {
+    "admaven-placement": "Bqjw7pdY4",
     "6a97888e-site-verification": "07bc72bd8d75f7e97c8be4156fee565a",
   }
 }
