@@ -91,8 +91,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </section>
           <Footer />
         </main>
-
-        <script data-cfasync="false" src="//dcbbwymp1bhlf.cloudfront.net/?wbbcd=1238383"></script>
       </body>
     </html>
   )
