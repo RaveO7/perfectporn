@@ -4,7 +4,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from '@vercel/analytics/react'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from 'next/font/google'
-import Script from "next/script";
 
 import './globals.css'
 
@@ -12,6 +11,7 @@ import Header from '../components/Header'
 import MoreEighteen from '@/components/MoreEighteen'
 import ModalPub from '@/components/ModalPub';
 import Footer from '@/components/Footer';
+import PopMagicAd from '@/components/pubs/PopMagicAd';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -74,22 +74,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         {/* Next gère automatiquement les meta tags via `export const metadata` */}
-             <Script
-        id="ad-network"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `//d33f51dyacx7bd.cloudfront.net/?aydfd=1239893`,
-        }}
-      />
       </head>
 
-        <body className={inter.className} suppressHydrationWarning={true}>
+      <body className={inter.className} suppressHydrationWarning={true}>
         {/* Analytics/components React dans le body — OK */}
         <GoogleAnalytics gaId="G-BCSQYEJTZZ" />
         <SpeedInsights />
         <Analytics />
 
         <MoreEighteen />
+        <PopMagicAd />
         {/* <ModalPub /> */}
 
         <main className="flex min-h-screen flex-col items-center">
