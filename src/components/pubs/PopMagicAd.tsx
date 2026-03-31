@@ -7,7 +7,7 @@ export default function PopMagicAd() {
     // Créer et injecter le script externe
     const script = document.createElement('script')
     script.setAttribute('data-cfasync', 'false')
-    script.src = '//dcbbwymp1bhlf.cloudfront.net/?wbbcd=1238383'
+    script.src = '//dcbbwymp1bhlf.cloudfront.net/?wbbcd=1250993'
     script.async = true
 
     // Ajouter le script au document
