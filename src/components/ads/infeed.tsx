@@ -63,6 +63,7 @@ function renderInFeedAd(def: InFeedAdDefinition) {
             insClassName={def.insClassName}
             className="w-full h-full flex items-center justify-center"
             minHeight="100%"
+            scriptSrc='https://a.magsrv.com/ad-provider.js'
           />
         </AdCard>
       )
@@ -88,4 +89,3 @@ export function getInFeedInjections(): GaleryInjection[] {
     node: renderInFeedAd(def),
   }))
 }
-

@@ -65,7 +65,6 @@ export default function Galery({
                     return <BlurImage key={index} image={image as Image} index={index} type={type} />
                 })}
             </div>
-            
         </div>
     )
 }

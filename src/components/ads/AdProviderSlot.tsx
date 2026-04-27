@@ -33,7 +33,7 @@ export type AdProviderSlotProps = {
   /**
    * URL du loader AdProvider.
    */
-  scriptSrc?: string
+  scriptSrc?: any
 }
 
 export default function AdProviderSlot({
@@ -41,7 +41,7 @@ export default function AdProviderSlot({
   insClassName,
   className,
   minHeight,
-  scriptSrc = 'https://a.magsrv.com/ad-provider.js',
+  scriptSrc,
 }: AdProviderSlotProps) {
   const zoneIdStr = String(zoneId)
   const dataKey = useMemo(() => `pp-adprovider-zone-${zoneIdStr}`, [zoneIdStr])
