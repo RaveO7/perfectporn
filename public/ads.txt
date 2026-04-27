@@ -1,0 +1,27 @@
+# ads.txt (IAB)
+# Remplace "A_REMPLACER" par tes IDs vendeurs/placements fournis par chaque régie.
+# Laisse uniquement les régies que tu utilises réellement (les autres peuvent rester commentées).
+
+# AdMaven
+admaven.com, 1250993, DIRECT
+
+# ExoClick
+exoclick.com, 1084516, DIRECT
+
+# TrafficJunky
+# trafficjunky.net, A_REMPLACER, DIRECT
+
+# PopAds
+# popads.net, A_REMPLACER, DIRECT
+
+# JuicyAds
+# juicyads.com, A_REMPLACER, DIRECT
+
+# PlugRush
+# plugrush.com, A_REMPLACER, DIRECT
+
+# TrafficStars
+# trafficstars.com, A_REMPLACER, DIRECT
+
+# ClickAdilla
+# clickadilla.com, A_REMPLACER, DIRECT

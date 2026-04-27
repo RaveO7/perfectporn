@@ -31,6 +31,34 @@ const nextConfig = {
     swcMinify: true, // Utilise SWC pour la minification (plus rapide que Terser)
     // Optimisation du CSS : Next.js minifie déjà le CSS par défaut en production
     // Le CSS critique est automatiquement inliné dans Next.js 14
+
+    async headers() {
+        // CSP optionnelle (à activer via ADS_CSP_ENABLED=1)
+        // Les scripts publicitaires changent souvent de domaines/CDN: commence large, puis resserre.
+        if (process.env.ADS_CSP_ENABLED !== '1') return []
+
+        const csp = [
+            "default-src 'self'",
+            // Beaucoup de régies utilisent des snippets inline; retire 'unsafe-inline' si ton setup n'en a pas besoin.
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: http:",
+            "img-src 'self' data: https: http:",
+            "style-src 'self' 'unsafe-inline' https: http:",
+            "connect-src 'self' https: http: wss:",
+            "frame-src 'self' https: http:",
+            "font-src 'self' data: https: http:",
+            "base-uri 'self'",
+        ].join('; ')
+
+        return [
+            {
+                source: '/(.*)',
+                headers: [
+                    { key: 'Content-Security-Policy', value: csp },
+                    { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+                ],
+            },
+        ]
+    },
 }
 
 module.exports = nextConfig

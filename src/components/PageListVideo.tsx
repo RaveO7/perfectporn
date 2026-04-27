@@ -5,6 +5,7 @@ import Loading from './Loading'
 import Nodata from './Nodata'
 import BurgerMenuIndexPage from './DroptwonFilter'
 import { upperFirstLetter } from './Utils'
+import { getInFeedInjections } from '@/components/ads/infeed'
 
 
 interface Props {
@@ -30,6 +31,7 @@ export default function PageListVideo(props: Props) {
 
     const valueMenu = props.valueMenu ? list.includes(props.valueMenu) ? props.valueMenu : "Latest" : props.valueMenu
     // type, valueMenu, nbrVideo, setValueMenu, list
+
     return (
         <div className='flex flex-col w-full'>
             <div className='w-full flex justify-between items-center text-[20px] mb-6 px-4 lg:px-0 font-bold'>
@@ -41,7 +43,13 @@ export default function PageListVideo(props: Props) {
                 {valueMenu && <BurgerMenuIndexPage valueMenu={valueMenu} setValueMenu={setValueMenu} list={list} />}
             </div>
 
-            <Galery images={videos} type={type} />
+            <Galery
+                images={videos}
+                type={type}
+                inject={getInFeedInjections()}
+            />
+
+
 
             <NavPage page={page} numberPage={numberPage} />
         </div >

@@ -9,9 +9,10 @@ import './globals.css'
 
 import Header from '../components/Header'
 import MoreEighteen from '@/components/MoreEighteen'
-import ModalPub from '@/components/ModalPub';
 import Footer from '@/components/Footer';
-import PopMagicAd from '@/components/pubs/PopMagicAd';
+import AdsBoot from '@/components/ads/AdsBoot'
+import StickyFooterAd from '@/components/ads/StickyFooterAd'
+import { TopLeaderboardAd } from '@/components/ads/placements'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -83,16 +84,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
 
         <MoreEighteen />
-        <PopMagicAd />
-        {/* <ModalPub /> */}
+        <AdsBoot />
 
         <main className="flex min-h-screen flex-col items-center">
           <Header />
           <section className="w-full mt-[72px] py-6 lg:px-12 min-h-[calc(100vh-92px)] ">
+            <TopLeaderboardAd />
             {children}
           </section>
           <Footer />
         </main>
+
+        <StickyFooterAd />
       </body>
     </html>
   )

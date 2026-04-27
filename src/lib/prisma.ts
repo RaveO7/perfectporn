@@ -11,9 +11,7 @@ const globalForPrisma = globalThis as unknown as {
 export const prisma =
   globalForPrisma.prisma ??
   new PrismaClient({
-    log: ['error'], // Logs d'erreur uniquement en production
+    log: ['error', 'warn'],
   })
 
-// En production, on ne réutilise pas l'instance entre les rechargements
-// pour éviter les problèmes de connexion
-
+if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
