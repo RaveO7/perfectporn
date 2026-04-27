@@ -3,7 +3,7 @@ import { createGetRequest } from '@/lib/api-helpers'
 import { normalizeUrl } from '@/components/Utils'
 
 export async function generateMetadata({ params }: { params: { id: any, test: any } }, parent: ResolvingMetadata): Promise<Metadata> {
-    const { id } = params;
+    const { 10 } = params;
 
     const apiUrlEndpoint = normalizeUrl(process.env.Site_URL || '', `api/dataVideo?value=${id}`)
 
