@@ -78,7 +78,7 @@ function BlurImage({ image, index, type }: { image: Image, index: number, type: 
     return (
         <Link
             href={url}
-            target={image.title && image.name ? `_blankz` : '_self'}
+            target={image.title && image.name ? `_blank` : '_self'}
             rel={image.title && image.name ? `noopener` : ''}
             role='link'
             aria-label={'Go to video ' + title} className='group'>

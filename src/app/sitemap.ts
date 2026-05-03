@@ -148,9 +148,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return [
         ...staticRoutes,
         freshVideoSitemap, // Sitemap fresh en premier pour prioriser les nouvelles vidéos
-        ...videoSitemaps,
-        ...actorSitemaps,
-        ...categorySitemaps,
-        ...channelSitemaps,
+        // ...videoSitemaps,
+        // ...actorSitemaps,
+        // ...categorySitemaps,
+        // ...channelSitemaps,
     ]
 }
